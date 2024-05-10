@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import FreindList from './FreindList'
 import AddFreind from './AddFreind'
+import { mobile, mobile460 } from '../../responsive'
 
 const Container = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const Container = styled.div`
   width: 45%;
   height: 100%;
   padding: 0px 10px;
+  ${mobile460({ width: '100%' })}
 `
 const Freind = ({split,setSplit,freindArr,setFreindArr,showform,setShowForm,freindObj,setFreindObj,yourExpense,setYourExpense,freindExpense,setFreindExpense}) => {
   return (

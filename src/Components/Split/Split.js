@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { mobile, mobile460 } from '../../responsive'
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +10,7 @@ const Container = styled.div`
   height: 100%;
   border-radius: 10px;
   padding: 40px;
+  ${mobile460({ width: '100%',height:'fit-content' })}
 `
 const Title = styled.h2`
     font-size: 24px;
@@ -77,14 +79,9 @@ const Split = ({freindArr, setFreindArr,freindObj,split,setSplit}) => {
         findFreind.rupee = freindExpense*1
       }else{
         findFreind.rupee = findFreind.rupee > 0 ? findFreind.rupee + (freindExpense*1) : findFreind.rupee + (freindExpense*1)
-        // if(payingBill == 1){
-        //   findFreind.rupee = findFreind.rupee > 0 ? findFreind.rupee + freindExpense : findFreind.rupee - freindExpense
-        // }
-        // else{
-        //   findFreind.rupee = findFreind.rupee > 0 ? findFreind.rupee - yourExpense : findFreind.rupee + yourExpense
-        // }
+        
       }
-      // findFreind.rupee ? (findFreind.rupee < 0 ? findFreind.rupee + freindExpense : findFreind.rupee - freindExpense)
+  
     }
 
 
